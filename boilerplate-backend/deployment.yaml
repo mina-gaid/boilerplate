@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boilerplate
+spec:
+  selector:
+    matchLabels:
+      app: boilerplate
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: boilerplate
+        version: v1
+    spec:
+      containers:
+        - name: boilerplate
+          image: __IMAGE__
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+      serviceAccountName: boilerplate-pipeline-runner
+      serviceAccount: boilerplate-pipeline-runner
+#test
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: boilerplate-service
+spec:
+  selector:
+    app: boilerplate
+  ports:
+    - port: 8000
+      name: http
