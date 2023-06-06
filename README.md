@@ -1,20 +1,12 @@
 # Description
 
-Chambers Full-stack Boilerplate
-
-## Features
-
-- Stores files of any type and name
-- Stores files at any URL
-- Does not allow interaction by non-authenticated users
-- Allows users to store multiple revisions of the same file at the same URL
-- Allows users to fetch any revisions of any file
+Full-stack Boilerplate
 
 ---
 
 # Development
 
-Developed using Python / Django and JavaScript / Aurelia
+Developed using Python / Django and JavaScript / React
 
 # Setup
 
